@@ -2,7 +2,7 @@
   description = "Advanced example of Nix-on-Droid system config with home-manager.";
 
   inputs = {
-    #nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.05";
+    nixpkgsold.url = "github:NixOS/nixpkgs/nixos-24.05";
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
 
     home-manager = {
@@ -17,13 +17,20 @@
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.home-manager.follows = "home-manager";
     };
+     # theme: for aesthetic plusplus
+     stylix = {
+       url = "github:danth/stylix";
+       inputs.nixpkgs.follows = "nixpkgsold";
+     };
   };
-
-  outputs = { self, nixpkgs, home-manager, nix-on-droid }: {
+  outputs = { self, nixpkgs, nixpkgsold, home-manager, nix-on-droid, stylix }: {
 
     nixOnDroidConfigurations.default = nix-on-droid.lib.nixOnDroidConfiguration {
       modules = [
         ./nix-on-droid.nix
+
+	#for stylix theme
+	stylix.nixOnDroidModules.stylix
 
         # list of extra modules for Nix-on-Droid system
         # { nix.registry.nixpkgs.flake = nixpkgs; }
