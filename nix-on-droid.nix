@@ -36,7 +36,7 @@
   nix.extraOptions = ''
     experimental-features = nix-command flakes
   '';
-
+  terminal.font = "${pkgs.terminus_font_ttf}/share/fonts/truetype/TerminusTTF.ttf";
   # Set your time zone
   #time.timeZone = "Europe/Berlin";
   # Configure home-manager
