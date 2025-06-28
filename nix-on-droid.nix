@@ -24,8 +24,8 @@
     #xz
     #zip
     #unzip
+    _0xproto
   ];
-
   # Backup etc files instead of failing to activate generation if a file already exists in /etc
   environment.etcBackupExtension = ".bak";
 
@@ -36,7 +36,7 @@
   nix.extraOptions = ''
     experimental-features = nix-command flakes
   '';
-  terminal.font = "${pkgs.terminus_font_ttf}/share/fonts/truetype/TerminusTTF.ttf";
+  terminal.font = "${pkgs._0xproto}/share/fonts/opentype/0xProto-Regular.otf";
   # Set your time zone
   #time.timeZone = "Europe/Berlin";
   # Configure home-manager
