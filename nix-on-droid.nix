@@ -24,7 +24,10 @@
     #xz
     #zip
     #unzip
-    _0xproto
+    #_0xproto
+    nerd-fonts._0xproto
+    #(nerdfonts.override { fonts = [ "_0xproto" ]; }) 
+    #_0xproto
   ];
   # Backup etc files instead of failing to activate generation if a file already exists in /etc
   environment.etcBackupExtension = ".bak";
@@ -36,7 +39,7 @@
   nix.extraOptions = ''
     experimental-features = nix-command flakes
   '';
-  terminal.font = "${pkgs._0xproto}/share/fonts/opentype/0xProto-Regular.otf";
+  terminal.font = "${pkgs.nerd-fonts._0xproto}/share/fonts/truetype/NerdFonts/0xProto/0xProtoNerdFontMono-Regular.ttf";
   # Set your time zone
   #time.timeZone = "Europe/Berlin";
   # Configure home-manager
