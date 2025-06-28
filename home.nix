@@ -14,7 +14,10 @@
 	ffmpeg
 	tree
 	eza
+	tenere
+        jetbrains-mono
   ];
+  fonts.fontconfig.enable = true;
   programs.home-manager.enable = true;
   # insert home-manager config
   programs.zoxide.enable = true;
@@ -32,6 +35,10 @@
 	autosuggestion.enable = true;
 	syntaxHighlighting.enable = true;
 	dotDir = ".config/zsh";
+	oh-my-zsh = {
+	  enable = true;
+	  theme = "robbyrussell";
+	};
 	shellAliases = {
 	  ll = "ls -la";
 	  gs = "git status";
