@@ -37,8 +37,11 @@
 	dotDir = ".config/zsh";
 	oh-my-zsh = {
 	  enable = true;
-	  theme = "robbyrussell";
 	};
+	initExtra = ''
+    	  source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme
+    [[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
+ 	 '';
 	shellAliases = {
 	  ll = "ls -la";
 	  gs = "git status";
