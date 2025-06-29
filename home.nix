@@ -19,7 +19,8 @@
 	#browsh
 	w3m
 	#alacritty
-	tmux
+	#tmux
+	zellij
 	
   ];
   #comment out this part to use stylix
