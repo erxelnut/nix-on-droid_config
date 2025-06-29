@@ -39,7 +39,7 @@
 	oh-my-zsh = {
 	  enable = true;
 	};
-	initExtra = ''
+	initContent = ''
 	  source ~/.config/zsh/highlight-colors.zsh
     	  source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme
 	  [[ -f ~/.config/zsh/.p10k.zsh ]] && source ~/.config/zsh/.p10k.zsh 
