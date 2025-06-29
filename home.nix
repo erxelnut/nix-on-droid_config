@@ -19,6 +19,7 @@
 	#browsh
 	w3m
 	#alacritty
+	tmux
 	
   ];
   #comment out this part to use stylix

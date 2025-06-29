@@ -8,22 +8,22 @@
     openssh
     # Some common stuff that people expect to have
     #procps
-    #killall
+    killall
     #diffutils
     #findutils
-    #utillinux
+    utillinux
     #tzdata
     #hostname
     man
-    #gnugrep
+    gnugrep
     #gnupg
     #gnused
     #gnutar
     #bzip2
     #gzip
     #xz
-    #zip
-    #unzip
+    zip
+    unzip
     #_0xproto
     nerd-fonts._0xproto
     #(nerdfonts.override { fonts = [ "_0xproto" ]; }) 
