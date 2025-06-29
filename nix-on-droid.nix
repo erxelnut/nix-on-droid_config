@@ -35,7 +35,6 @@
   # Read the changelog before changing this value
   system.stateVersion = "24.05";
   user = {
-    userName = "opusdroid24";
     shell = "${lib.getExe pkgs.zsh}";
   };
   # Set up nix for flakes
