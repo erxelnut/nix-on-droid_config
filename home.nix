@@ -15,7 +15,11 @@
 	tree
 	eza
 	tenere
-        jetbrains-mono
+        cmatrix
+	#browsh
+	w3m
+	#alacritty
+	
   ];
   #comment out this part to use stylix
   #fonts.fontconfig.enable = true;
