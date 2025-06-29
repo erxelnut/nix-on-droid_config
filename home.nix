@@ -17,7 +17,8 @@
 	tenere
         jetbrains-mono
   ];
-  fonts.fontconfig.enable = true;
+  #comment out this part to use stylix
+  #fonts.fontconfig.enable = true;
   programs.home-manager.enable = true;
   # insert home-manager config
   programs.zoxide.enable = true;
@@ -39,9 +40,10 @@
 	  enable = true;
 	};
 	initExtra = ''
+	  source ~/.config/zsh/highlight-colors.zsh
     	  source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme
-    [[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
- 	 '';
+	  [[ -f ~/.config/zsh/.p10k.zsh ]] && source ~/.config/zsh/.p10k.zsh 
+	'';
 	shellAliases = {
 	  ll = "ls -la";
 	  gs = "git status";
@@ -50,3 +52,4 @@
 
  
 }
+

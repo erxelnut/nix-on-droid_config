@@ -34,12 +34,13 @@
 
   # Read the changelog before changing this value
   system.stateVersion = "24.05";
-
+  user.shell = "${lib.getExe pkgs.zsh}";
   # Set up nix for flakes
   nix.extraOptions = ''
     experimental-features = nix-command flakes
   '';
   terminal.font = "${pkgs.nerd-fonts._0xproto}/share/fonts/truetype/NerdFonts/0xProto/0xProtoNerdFontMono-Regular.ttf";
+  
   # Set your time zone
   #time.timeZone = "Europe/Berlin";
   # Configure home-manager
