@@ -34,7 +34,7 @@
   programs.git = {
 	enable = true;
 	userEmail = "test@gmail.com";
-	userName = "opusdelu24";
+	userName = "erxelnut";
   };
   programs.zsh = {
   	enable = true;
